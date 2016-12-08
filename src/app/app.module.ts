@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GifsComponent } from './gifs/gifs.component';
 
+import { GiftubeApiService } from './giftube-api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { GifsComponent } from './gifs/gifs.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [GiftubeApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
