@@ -9,13 +9,15 @@ import { FooterComponent } from './footer/footer.component';
 import { GifsComponent } from './gifs/gifs.component';
 
 import { GiftubeApiService } from './giftube-api.service';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    GifsComponent
+    GifsComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
