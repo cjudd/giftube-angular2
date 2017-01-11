@@ -1,3 +1,6 @@
-<p>
-  gifs works!
-</p>
+<ol>
+  <li *ngFor="let gif of gifs">
+    {{gif.title}}<br>
+    <img src={{gif.url}} title="{{ gif.title}} " />
+  </li>
+</ol>

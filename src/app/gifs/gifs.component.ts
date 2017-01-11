@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { GiftubeApiService } from '../giftube-api.service';
 
 @Component({
   selector: 'app-gifs',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GifsComponent implements OnInit {
 
-  constructor() { }
+  gifs;
+
+  constructor(private _giftubeApiService: GiftubeApiService) { }
 
   ngOnInit() {
+  	this._giftubeApiService.fetchGifs().subscribe(
+  		gifs => this.gifs = gifs,
+  		error => console.log('Error fetching gifs'));
   }
 
 }
